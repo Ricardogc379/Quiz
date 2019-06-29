@@ -50,7 +50,6 @@ public class CargaDAO {
                 campos.put(SQLDao.QUESTAO_RESPOSTA4, obj.getResposta4());
                 campos.put(SQLDao.QUESTAO_CORRETA, obj.getCorreta());
                 campos.put(SQLDao.QUESTAO_CATEGORIA, obj.getCategoria());
-                System.out.println("Numero de salvamento: " + x);
                 database.insert(SQLDao.TABLE_QUESTAO, null, campos);
             }
             Cursor cursor = database.query(SQLDao.TABLE_QUESTAO,
