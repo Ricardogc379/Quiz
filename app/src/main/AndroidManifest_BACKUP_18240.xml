@@ -23,13 +23,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+<<<<<<< HEAD
+        <activity android:name=".GameActivity" />
+=======
         <activity
             android:name=".Inicial"
             android:label="@string/title_activity_inicial"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
 
+>>>>>>> 8054584cb83c72b284378b74676ac4cc5ff9dab6
     </application>
 
 </manifest>
