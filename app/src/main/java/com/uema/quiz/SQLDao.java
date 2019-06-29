@@ -34,7 +34,7 @@ public class SQLDao extends SQLiteOpenHelper {
             + RANKING_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
             + RANKING_NOME + " TEXT NOT NULL, " + RANKING_PONTUACAO + " INTEGER NOT NULL );";
 
-    private static final int DB_VERSION = 1;
+    private static final int DB_VERSION = 4;
 
     public SQLDao(Context context) {
         super(context, DB_NAME, null, DB_VERSION);

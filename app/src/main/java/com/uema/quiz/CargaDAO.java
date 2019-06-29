@@ -12,28 +12,10 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
-public class CargaDAO {
-
-    private SQLiteDatabase database;
-
-    private SQLDao startSQL;
-
-    private String[] TABLE_QUESTAO = {
-            SQLDao.QUESTAO_ID , SQLDao.QUESTAO_PERGUNTA , SQLDao.QUESTAO_RESPOSTA1 ,
-            SQLDao.QUESTAO_RESPOSTA2 , SQLDao.QUESTAO_RESPOSTA3 , SQLDao.QUESTAO_RESPOSTA4,
-            SQLDao.QUESTAO_CATEGORIA
-    };
+public class CargaDAO extends DAO{
 
     public CargaDAO(Context ctx){
-        this.startSQL = new SQLDao(ctx);
-    }
-
-    public void open() throws SQLException{
-        this.database = this.startSQL.getWritableDatabase();
-    }
-
-    public void close() throws SQLException{
-        startSQL.close();
+        super(ctx);
     }
 
     public boolean salvarBancoQuestoes(ArrayList<Questao> questoes){
@@ -53,7 +35,7 @@ public class CargaDAO {
                 database.insert(SQLDao.TABLE_QUESTAO, null, campos);
             }
             Cursor cursor = database.query(SQLDao.TABLE_QUESTAO,
-                    TABLE_QUESTAO,null,null,null,null,null );
+                    COLUMNS_TABLE_QUESTAO,null,null,null,null,null );
             cursor.moveToFirst();
             System.out.println("Numero de Questoes salvas no SQLite: " + cursor.getCount());
             return true;
