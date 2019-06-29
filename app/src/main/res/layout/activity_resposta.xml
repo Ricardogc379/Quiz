@@ -1,9 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="QUIZ GAME"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="50dp"
+        android:paddingBottom="15dp"
+        android:paddingTop="20dp"/>
 
+    <TextView
+        android:id="@+id/tituloCategoria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nome Categoria"
+        android:textAlignment="center"
+        android:textStyle="bold" />
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/wrong"
+        android:layout_marginTop="35dp"/>
+
+    <TextView
+        android:paddingTop="15dp"
+        android:textSize="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resposta Errada!"
+        android:textAlignment="center"
+        android:textStyle="bold" />
+
+    <TextView
+        android:paddingTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resposta"
+        android:textAlignment="center"
+        android:textStyle="bold" />
+
+    <TextView
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempor neque."
+        android:textAlignment="center" />
 
 </LinearLayout>

@@ -9,11 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".RespostaActivity"></activity>
+        <activity
+            android:name=".RespostaActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".GameActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
             android:name=".HomeActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -27,8 +28,7 @@
         <activity
             android:name=".Inicial"
             android:label="@string/title_activity_inicial"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
 
     </application>
 
