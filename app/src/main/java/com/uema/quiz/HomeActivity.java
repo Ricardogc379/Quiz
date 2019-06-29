@@ -21,7 +21,7 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intentGame = new Intent(HomeActivity.this, GameActivity.class);
 
-                startActivity(intentGame);
+                //startActivity(intentGame);
             }
         });
 
