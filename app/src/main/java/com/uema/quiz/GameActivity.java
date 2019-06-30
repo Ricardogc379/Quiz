@@ -62,7 +62,7 @@ public class GameActivity extends AppCompatActivity {
         resposta4.setText(Lista.get(numeroQuestao).getResposta4());
 
         System.out.println("Numero do ID da Pergunta: "+ Lista.get(numeroQuestao).getID());
->>>>>>> 15b5bcf3db857d017bbdf0efd8004d830e406362
+
         Button btnResposta = findViewById(R.id.btnNext);
 
         btnResposta.setOnClickListener(new View.OnClickListener() {
