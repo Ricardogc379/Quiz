@@ -10,16 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".RankingActivity"
+            android:name=".Activity.RankingActivity"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
-            android:name=".RespostaActivity"
+            android:name=".Activity.RespostaActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".GameActivity"
+            android:name=".Activity.GameActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".Activity.HomeActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,10 +27,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Inicial"
-            android:label="@string/title_activity_inicial"
-            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

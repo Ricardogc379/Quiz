@@ -31,4 +31,11 @@ public class Ranking {
     public void setPontuacao(int pontuacao) {
         Pontuacao = pontuacao;
     }
+
+    @Override
+    public String toString(){
+        String rank;
+        rank = "" + getNome().toUpperCase() + " - " + getCategoria() + " - " + getPontuacao();
+        return rank;
+    }
 }

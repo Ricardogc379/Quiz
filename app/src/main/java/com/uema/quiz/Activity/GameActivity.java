@@ -1,4 +1,4 @@
-package com.uema.quiz;
+package com.uema.quiz.Activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -9,7 +9,10 @@ import android.widget.RadioButton;
 import android.widget.TextView;
 
 import com.uema.quiz.Model.Questao;
+import com.uema.quiz.Model.Ranking;
+import com.uema.quiz.R;
 import com.uema.quiz.SQLDATA.GeradorDAO;
+import com.uema.quiz.SQLDATA.RankingDAO;
 
 import java.util.ArrayList;
 
@@ -29,10 +32,15 @@ public class GameActivity extends AppCompatActivity {
     // STRING DA CATEGORIA SELECIONADA NA HOME ACTIVITY
     public static String CategoriaSelecionada = "";
 
+    // NOME DO JOGADOR DA PARTIDA
+    public static String NomeJogador = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
+        contador = 0;
+        numeroQuestao = 0;
     }
 
     @Override
@@ -41,17 +49,12 @@ public class GameActivity extends AppCompatActivity {
         Intent categoriaRecebida = getIntent();
 
         String categoria = categoriaRecebida.getStringExtra("Categoria");
-        System.out.println("Selecionada: " +  categoria);
-
-
-
 
         CategoriaSelecionada = categoria;
 
         GeradorDAO dao = new GeradorDAO(this);
         dao.open();
         Lista = dao.capturarQuestoes(CategoriaSelecionada);
-        System.out.println("Numero de perguntas: " + Lista.size());
         //------------------------------------------------------------------------------------------
         //------------------------------------------------------------------------------------------
         TextView categoriaText = (TextView) findViewById(R.id.tituloCategoria);
@@ -68,8 +71,6 @@ public class GameActivity extends AppCompatActivity {
         resposta3.setText(Lista.get(numeroQuestao).getResposta3());
         final RadioButton resposta4 = (RadioButton) findViewById(R.id.resposta4);
         resposta4.setText(Lista.get(numeroQuestao).getResposta4());
-
-        System.out.println("Numero do ID da Pergunta: "+ Lista.get(numeroQuestao).getID());
 
         Button btnResposta = findViewById(R.id.btnNext);
 
@@ -98,6 +99,22 @@ public class GameActivity extends AppCompatActivity {
             numeroQuestao = numeroQuestao + 1;
         }else{
             numeroQuestao = 0;
+            //--------------------------------------------------------------------------------------
+            // SALVA A PONTUACAO DO JOGADOR NO RANKING
+            //--------------------------------------------------------------------------------------
+            RankingDAO ranking = new RankingDAO(this);
+            ranking.open();
+
+            Ranking novo = new Ranking();
+            novo.setNome(GameActivity.NomeJogador);
+            novo.setCategoria(GameActivity.CategoriaSelecionada);
+            novo.setPontuacao(contador);
+
+            ranking.salvarPontuacao(novo);
+            //--------------------------------------------------------------------------------------
+            //--------------------------------------------------------------------------------------
+
+            contador = 0;
             finish();
         }
         super.onRestart();

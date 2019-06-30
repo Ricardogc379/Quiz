@@ -1,8 +1,5 @@
 package com.uema.quiz.Model;
 
-import com.uema.quiz.Categoria;
-import com.uema.quiz.Model.Questao;
-
 import java.util.ArrayList;
 
 public class Carga {

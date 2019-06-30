@@ -1,4 +1,4 @@
-package com.uema.quiz;
+package com.uema.quiz.Activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,6 +7,7 @@ import android.widget.ListView;
 
 import com.uema.quiz.Model.Pessoa;
 import com.uema.quiz.Model.Ranking;
+import com.uema.quiz.R;
 import com.uema.quiz.SQLDATA.RankingDAO;
 
 import java.util.ArrayList;

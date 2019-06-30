@@ -20,7 +20,6 @@ public class CargaDAO extends DAO {
             startSQL.resetarDB();
             ContentValues campos = new ContentValues();
             int count = questoes.size();
-            System.out.println("Numero de Questoes na lista: " + count);
             for (int x = 0 ; x < questoes.size(); x++) {
                 Questao obj = questoes.get(x);
                 campos.put(SQLDao.QUESTAO_PERGUNTA, obj.getPergunta());

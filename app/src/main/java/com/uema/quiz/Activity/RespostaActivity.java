@@ -1,4 +1,4 @@
-package com.uema.quiz;
+package com.uema.quiz.Activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +7,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.uema.quiz.Model.Questao;
+import com.uema.quiz.R;
 
 public class RespostaActivity extends AppCompatActivity {
 
@@ -34,9 +35,6 @@ public class RespostaActivity extends AppCompatActivity {
 
         int respondida = receiver.getIntExtra("Respondida",0);
 
-        System.out.println("Respondida: " + respondida);
-        System.out.println("Resposta Correta " + obj.getCorreta());
-
         //------------------------------------------------------------------------------------------
         // CAPTURA DOS ELEMENTOS DO LAYOUT
         //------------------------------------------------------------------------------------------
@@ -54,13 +52,13 @@ public class RespostaActivity extends AppCompatActivity {
         // DEFINE SE AS RESPOSTA É A CORRETA, E ALTERA AS IMAGENS E TEXTS DO LAYOUT
         if(respondida == obj.getCorreta()){
             imagemCerta.setImageDrawable(getResources().getDrawable(R.drawable.checkmark));
-            resultado.setText("Acertou");
+            resultado.setText("Acertou!");
             respostaCorreta.setText(respostaCorreta(obj));
             // ADICIONA A CONTAGEM DO NUMERO DE PERGUNTAS RESPONDIDAS CORRETAMENTE
             GameActivity.contador = GameActivity.contador + 1;
         }else{
             imagemCerta.setImageDrawable(getResources().getDrawable(R.drawable.wrong));
-            resultado.setText("Errou");
+            resultado.setText("Errou!");
             respostaCorreta.setText(respostaCorreta(obj));
         }
 
@@ -71,7 +69,7 @@ public class RespostaActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try{
-                    Thread.sleep(10000);
+                    Thread.sleep(3000);
                 }catch (InterruptedException e){
                     e.printStackTrace();
                 }

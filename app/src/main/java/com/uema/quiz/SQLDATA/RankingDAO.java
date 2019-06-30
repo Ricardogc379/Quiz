@@ -21,7 +21,8 @@ public class RankingDAO extends DAO{
             campos.put(SQLDao.RANKING_NOME, receiver.getNome());
             campos.put(SQLDao.RANKING_CATEGORIA, receiver.getCategoria());
             campos.put(SQLDao.RANKING_PONTUACAO, receiver.getPontuacao());
-            database.insert(SQLDao.TABLE_QUESTAO, null, campos);
+            database.insert(SQLDao.TABLE_RANKING, null, campos);
+            System.out.println("Salvo com sucesso!");
         }catch (SQLException e){
             System.out.println("Erro ao salvar pontuação no Ranking!");
         }
