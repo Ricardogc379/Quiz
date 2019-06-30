@@ -37,32 +37,33 @@
 
 
     <RadioGroup
+        android:id="@+id/resposta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginBottom="20dp">
 
         <RadioButton
+            android:id="@+id/resposta1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempor neque."
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/resposta2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempor neque." />
 
         <RadioButton
+            android:id="@+id/resposta3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempor neque." />
 
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempor neque." />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempor neque." />
-
-        <RadioButton
+            android:id="@+id/resposta4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempor neque." />

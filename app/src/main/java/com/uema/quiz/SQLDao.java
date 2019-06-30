@@ -34,7 +34,7 @@ public class SQLDao extends SQLiteOpenHelper {
             + RANKING_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
             + RANKING_NOME + " TEXT NOT NULL, " + RANKING_PONTUACAO + " INTEGER NOT NULL );";
 
-    private static final int DB_VERSION = 4;
+    private static final int DB_VERSION = 5;
 
     public SQLDao(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
@@ -51,6 +51,12 @@ public class SQLDao extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_QUESTAO);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_RANKING);
         onCreate(db);
+    }
+
+    public void resetarDB(){
+        SQLiteDatabase db = getWritableDatabase();
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_QUESTAO);
+        db.execSQL(DB_CREATE_TABLE_QUESTAO);
     }
 
 }

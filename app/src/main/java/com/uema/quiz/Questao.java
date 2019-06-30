@@ -2,6 +2,8 @@ package com.uema.quiz;
 
 public class Questao {
 
+    private int ID;
+
     private String Pergunta;
 
     private String Resposta1;
@@ -80,5 +82,13 @@ public class Questao {
 
     public void setCategoria(String categoria) {
         Categoria = categoria;
+    }
+
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
     }
 }

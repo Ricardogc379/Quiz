@@ -20,6 +20,7 @@ public class CargaDAO extends DAO{
 
     public boolean salvarBancoQuestoes(ArrayList<Questao> questoes){
         try{
+            startSQL.resetarDB();
             ContentValues campos = new ContentValues();
             int count = questoes.size();
             System.out.println("Numero de Questoes na lista: " + count);

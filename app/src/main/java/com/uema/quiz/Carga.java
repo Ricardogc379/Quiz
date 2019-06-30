@@ -17,45 +17,45 @@ public class Carga {
                 "1532",
                 "1615",
                 4,
-                Categoria.HISTORIA));
+                Categoria.CONHECIMENTOS_GERAIS));
         lista.add(new Questao(
                 "NOME DO DIRETOR DO FILME X",
                 "SEI LA",
-                "DSAD",
-                "DSAD",
-                "DSAD",
+                "talves",
+                "nunca",
+                "quem sabe",
                 3,
                 Categoria.CONHECIMENTOS_GERAIS));
         lista.add(new Questao(
-                "DASDSA",
-                "WEQWEQ",
-                "DSAD",
-                "YTR",
-                "YUTUYT",
+                "Qual o dia da proclamacao da republica",
+                "1994",
+                "1995",
+                "1503",
+                "1505",
                 3,
                 Categoria.CONHECIMENTOS_GERAIS));
         lista.add(new Questao(
-                "BVBCNCV",
-                "GFDGHGF",
-                "FDSFSD",
-                "RWER",
-                "FDSUYE",
+                "Quantos paus se faz uma canoa",
+                "3",
+                "4",
+                "5",
+                "nenhum",
                 3,
                 Categoria.CONHECIMENTOS_GERAIS));
         lista.add(new Questao(
-                "EWQEQWEWQWQE",
-                "YTUYT",
-                "GFFDGFD",
-                "HJHGJHGJ",
-                "NVBNBV",
+                "Quem foi Dom pedro 3",
+                "rei",
+                "monarca",
+                "ze ninguem",
+                "sei la",
                 3,
                 Categoria.CONHECIMENTOS_GERAIS));
         lista.add(new Questao(
-                "NBVNVNBV",
-                "HGFH",
-                "TDSFD",
-                "UYUEDDA",
-                "QWEVDSA",
+                "O dia em que a terra parou",
+                "30-12-2019",
+                "30-1-2019",
+                "30-2-2019",
+                "coloca qualquer merda ai",
                 3,
                 Categoria.CONHECIMENTOS_GERAIS));
         return lista;

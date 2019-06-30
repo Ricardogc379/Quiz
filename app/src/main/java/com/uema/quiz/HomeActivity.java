@@ -33,9 +33,6 @@ public class HomeActivity extends AppCompatActivity {
                 Toast.makeText(this,"Carga falhou",Toast.LENGTH_LONG).show();
             }
             carga.close();
-            GeradorDAO dao = new GeradorDAO(this);
-            dao.open();
-            dao.capturarQuestoes(Categoria.CONHECIMENTOS_GERAIS);
             System.out.println("Busca feita");
         }catch (Exception e){
             System.out.println("Falha ao realiza a conexao"+ e.getMessage());
