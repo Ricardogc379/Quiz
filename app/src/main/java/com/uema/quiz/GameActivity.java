@@ -14,6 +14,10 @@ public class GameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
+        Intent categoriaRecebida = getIntent();
+
+        String categoria = categoriaRecebida.getStringExtra("Categoria");
+        System.out.println("Selecionada: " +  categoria);
         //Troca de telas
         Button btnResposta = findViewById(R.id.btnNext);
 
