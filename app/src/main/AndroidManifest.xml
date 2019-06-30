@@ -10,11 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".RespostaActivity"
+            android:name=".RankingActivity"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
+            android:name=".RespostaActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".GameActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".HomeActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -24,12 +27,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".Inicial"
             android:label="@string/title_activity_inicial"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

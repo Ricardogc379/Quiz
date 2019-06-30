@@ -47,5 +47,19 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
+
+        //Troca de telas
+        Button btnRanking = findViewById(R.id.btnRanking);
+
+        btnRanking.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentRanking = new Intent(HomeActivity.this, RankingActivity.class);
+
+                startActivity(intentRanking);
+            }
+        });
+
+
     }
 }
