@@ -1,9 +1,8 @@
-package com.uema.quiz;
+package com.uema.quiz.SQLDATA;
 
 import android.content.Context;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
-import android.os.strictmode.SqliteObjectLeakedViolation;
 
 public abstract class DAO {
 
@@ -17,7 +16,7 @@ public abstract class DAO {
             SQLDao.QUESTAO_CATEGORIA
     };
 
-    protected String[] TABLE_RANKING = {
+    protected String[] COLUMNS_TABLE_RANKING = {
             SQLDao.RANKING_ID , SQLDao.RANKING_NOME , SQLDao.RANKING_PONTUACAO
     };
 

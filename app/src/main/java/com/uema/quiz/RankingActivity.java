@@ -6,6 +6,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.uema.quiz.Model.Pessoa;
+import com.uema.quiz.Model.Ranking;
+import com.uema.quiz.SQLDATA.RankingDAO;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,23 +19,16 @@ public class RankingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ranking);
 
-        ListView listaPessoa = findViewById(R.id.ranking);
+        ListView listaRanking = findViewById(R.id.ranking);
 
-        List<Pessoa> lista = new ArrayList<>();
+        RankingDAO ranking = new RankingDAO(this);
+        ranking.open();
 
-        Pessoa p1 = new Pessoa("Cicero",1);
-        Pessoa p2 = new Pessoa("Lynna",3);
-        Pessoa p3 = new Pessoa("Ricardo",2);
-        Pessoa p4 = new Pessoa("Antonio",0);
+        List<Ranking> objs = ranking.getListaRanking();
 
-        lista.add(p1);
-        lista.add(p2);
-        lista.add(p3);
-        lista.add(p4);
+        ArrayAdapter<Ranking> adapter = new ArrayAdapter<Ranking>(this,android.R.layout.simple_list_item_1,objs);
 
-        ArrayAdapter<Pessoa> adapter = new ArrayAdapter<Pessoa>(this,android.R.layout.simple_list_item_1,lista);
-
-        listaPessoa.setAdapter(adapter);
+        listaRanking.setAdapter(adapter);
 
 
     }

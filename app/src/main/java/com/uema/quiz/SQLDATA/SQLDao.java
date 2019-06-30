@@ -1,4 +1,4 @@
-package com.uema.quiz;
+package com.uema.quiz.SQLDATA;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -21,6 +21,7 @@ public class SQLDao extends SQLiteOpenHelper {
     public static final String TABLE_RANKING      = "RANKING";
     public static final String RANKING_ID         = "ID";
     public static final String RANKING_NOME       = "NOME";
+    public static final String RANKING_CATEGORIA  = "CATEGORIA";
     public static final String RANKING_PONTUACAO  = "PONTUACAO";
 
     private static final String DB_CREATE_TABLE_QUESTAO =
@@ -32,9 +33,11 @@ public class SQLDao extends SQLiteOpenHelper {
 
     private static final String DB_CREATE_TABLE_RANKING = "CREATE TABLE " + TABLE_RANKING + " ("
             + RANKING_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-            + RANKING_NOME + " TEXT NOT NULL, " + RANKING_PONTUACAO + " INTEGER NOT NULL );";
+            + RANKING_NOME + " TEXT NOT NULL, "
+            + RANKING_CATEGORIA + " TEXT NOT NULL, "
+            + RANKING_PONTUACAO + " INTEGER NOT NULL );";
 
-    private static final int DB_VERSION = 5;
+    private static final int DB_VERSION = 1;
 
     public SQLDao(Context context) {
         super(context, DB_NAME, null, DB_VERSION);

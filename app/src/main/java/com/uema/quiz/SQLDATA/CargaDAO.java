@@ -1,18 +1,15 @@
-package com.uema.quiz;
+package com.uema.quiz.SQLDATA;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
-import android.database.sqlite.SQLiteDatabase;
+
+import com.uema.quiz.Model.Questao;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
 
-public class CargaDAO extends DAO{
+public class CargaDAO extends DAO {
 
     public CargaDAO(Context ctx){
         super(ctx);

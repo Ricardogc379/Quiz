@@ -1,13 +1,13 @@
-package com.uema.quiz;
+package com.uema.quiz.SQLDATA;
 
 import android.content.Context;
 import android.database.Cursor;
-import android.database.SQLException;
-import android.database.sqlite.SQLiteDatabase;
+
+import com.uema.quiz.Model.Questao;
 
 import java.util.ArrayList;
 
-public class GeradorDAO extends DAO{
+public class GeradorDAO extends DAO {
 
     public ArrayList<Questao> Escolhidas;
 

@@ -1,4 +1,4 @@
-package com.uema.quiz;
+package com.uema.quiz.Model;
 
 public class Questao {
 

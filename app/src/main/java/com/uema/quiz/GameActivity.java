@@ -1,25 +1,33 @@
 package com.uema.quiz;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.Switch;
 import android.widget.TextView;
+
+import com.uema.quiz.Model.Questao;
+import com.uema.quiz.SQLDATA.GeradorDAO;
 
 import java.util.ArrayList;
 
 public class GameActivity extends AppCompatActivity {
 
+    // LISTA DE QUESTÕES SELECIONADAS PELO GERADORDAO -> QUE REALIZA A BUSCA NO SQLITE DE PERGUNTAS
+    // DE ACORDO COM A CATEGORIA
     public static ArrayList<Questao> Lista;
 
+    // SINALIZADOR DE QUAL A QUESTAO ESTÁ SENDO RESPONDIDA NO MOMENTO ATUAL
     public static int numeroQuestao = 0;
 
-    private static String CategoriaSelecionada = "";
+    // SINALIZADOR UTILIZADO PELA RESPOSTA ACTIVITY QUE DEFINE QUANTAS PERGUNTAS
+    // FORAM RESPONDIDAS CORRETAMENTE
+    public static int contador = 0;
+
+    // STRING DA CATEGORIA SELECIONADA NA HOME ACTIVITY
+    public static String CategoriaSelecionada = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
