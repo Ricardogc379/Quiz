@@ -10,4 +10,8 @@ public class Categoria {
 
     public final static String ESPORTE = "ESPORTE";
 
+    public final static String BRASIL = "BRASIL";
+
+    public final static String CARROS = "CARROS";
+
 }
