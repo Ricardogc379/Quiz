@@ -18,6 +18,7 @@ public class GameActivity extends AppCompatActivity {
 
         String categoria = categoriaRecebida.getStringExtra("Categoria");
         System.out.println("Selecionada: " +  categoria);
+
         //Troca de telas
         Button btnResposta = findViewById(R.id.btnNext);
 
