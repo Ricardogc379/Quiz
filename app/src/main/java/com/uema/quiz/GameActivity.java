@@ -42,6 +42,10 @@ public class GameActivity extends AppCompatActivity {
 
         String categoria = categoriaRecebida.getStringExtra("Categoria");
         System.out.println("Selecionada: " +  categoria);
+
+
+
+
         CategoriaSelecionada = categoria;
 
         GeradorDAO dao = new GeradorDAO(this);
@@ -66,6 +70,7 @@ public class GameActivity extends AppCompatActivity {
         resposta4.setText(Lista.get(numeroQuestao).getResposta4());
 
         System.out.println("Numero do ID da Pergunta: "+ Lista.get(numeroQuestao).getID());
+
         Button btnResposta = findViewById(R.id.btnNext);
 
         btnResposta.setOnClickListener(new View.OnClickListener() {
