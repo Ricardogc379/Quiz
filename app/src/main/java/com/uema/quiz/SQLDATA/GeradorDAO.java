@@ -18,7 +18,7 @@ public class GeradorDAO extends DAO {
     public ArrayList<Questao> capturarQuestoes(String Categoria){
         String select = SQLDao.QUESTAO_ID + " = ?";
         Cursor x = database.rawQuery("SELECT * FROM " + SQLDao.TABLE_QUESTAO + " WHERE "
-                + SQLDao.QUESTAO_CATEGORIA + " = '" + Categoria +"' ORDER BY RANDOM() LIMIT 3", null);
+                + SQLDao.QUESTAO_CATEGORIA + " = '" + Categoria +"' ORDER BY RANDOM() LIMIT 10", null);
         x.moveToFirst();
 
         ArrayList<Questao> questoes = new ArrayList<Questao>();

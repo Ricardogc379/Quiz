@@ -35,7 +35,7 @@ public class Ranking {
     @Override
     public String toString(){
         String rank;
-        rank = "" + getNome().toUpperCase() + " - " + getCategoria() + " - " + getPontuacao();
+        rank = "JOGADOR: " + getNome().toUpperCase() + "\nCATEGORIA: " + getCategoria() + "\nRESPOSTAS CORRETAS: " + getPontuacao() + "\n";
         return rank;
     }
 }

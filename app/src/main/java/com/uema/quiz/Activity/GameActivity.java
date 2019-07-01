@@ -91,6 +91,17 @@ public class GameActivity extends AppCompatActivity {
                 startActivity(intentNext);
             }
         });
+
+        Button btnSair = (Button) findViewById(R.id.btnsair);
+        btnSair.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                numeroQuestao = 0;
+                contador = 0;
+                finish();
+            }
+        });
+
     }
 
     @Override

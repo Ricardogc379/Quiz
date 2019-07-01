@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#024a4e">
 
     <TextView
         android:layout_width="match_parent"
@@ -12,7 +13,8 @@
         android:textStyle="bold"
         android:textSize="50dp"
         android:paddingBottom="15dp"
-        android:paddingTop="20dp"/>
+        android:paddingTop="20dp"
+        android:textColor="#ffffff"/>
 
     <TextView
         android:id="@+id/tituloCategoria"
@@ -20,7 +22,8 @@
         android:layout_height="wrap_content"
         android:text="Nome Categoria"
         android:textAlignment="center"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="#5efe93"/>
     <ImageView
         android:id="@+id/certo"
         android:layout_width="match_parent"
@@ -36,7 +39,8 @@
         android:layout_height="wrap_content"
         android:text=""
         android:textAlignment="center"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="#ffffff"/>
 
     <TextView
         android:paddingTop="15dp"
@@ -44,7 +48,8 @@
         android:layout_height="wrap_content"
         android:text="Resposta"
         android:textAlignment="center"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="#ffffff"/>
 
     <TextView
         android:id="@+id/respostaCorreta"
@@ -54,6 +59,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tempor neque."
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:textColor="#58f214"/>
 
 </LinearLayout>
